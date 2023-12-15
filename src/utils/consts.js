@@ -13,7 +13,7 @@ const REGIONS = {
   },
 }
 
-const fakeData = {
+const FAKE_DATA = {
   ru: {
     letters:
       'абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ',
@@ -100,4 +100,9 @@ const fakeData = {
   },
 };
 
-export { REGIONS, fakeData }
+const START_USER_QUANTITY = 20
+const PAGE_STEP = 10
+
+const RU_CITY_PREFIX = ['г.', 'д.', 'г.п.', 'город', 'деревня', 'дер.', 'село'];
+
+export { REGIONS, FAKE_DATA, RU_CITY_PREFIX, START_USER_QUANTITY, PAGE_STEP }
