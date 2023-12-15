@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 import { useDebouncedValue } from '../../../hooks/useDebouncedValue';
 import { Context } from '../../../hooks/useAppState'
+import { MAX_SEED } from '../../../utils/consts';
 
 const useSeed = () => {
   const { seed, setSeed } = useContext(Context)
@@ -8,7 +9,7 @@ const useSeed = () => {
   useDebouncedValue(seedInputValue, setSeed)
 
   const setRandomSeed = () => {
-    setSeedInputValue(Math.ceil(Math.random() * Number.MAX_SAFE_INTEGER))
+    setSeedInputValue(Math.ceil(Math.random() * MAX_SEED))
   }
 
   const handleSeedChange = (event) => {
