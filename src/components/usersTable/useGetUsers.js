@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react"
-import getUser from "../../utils/generateFakeData"
+import { getUser } from "../../utils/generateFakeData"
 import { START_USER_QUANTITY, PAGE_STEP } from "../../utils/consts"
+import generateMistake from "../../utils/generateMistakesInUser"
 
-const useGetUsers = (seed, country) => {
+const useGetUsers = (seed, country, mistakes = 0) => {
   const [userList, setUserList] = useState([])
 
   useEffect(() => {
     setUserList([])
     getUserList(0, START_USER_QUANTITY)
 
-  }, [seed, country])
+  }, [seed, country, mistakes])
 
   useEffect(() => {
     window.addEventListener('scroll', getNextUsers)
@@ -33,7 +34,8 @@ const useGetUsers = (seed, country) => {
     for (let i = start; i < start + end; i++) {
       const currentSeed = seed + i
       const newUser = getUser(currentSeed, country)
-      newUsers.push(newUser)
+      const newUserWithMistakes = generateMistake(newUser, mistakes, currentSeed, country)
+      newUsers.push(newUserWithMistakes)
     }
     setUserList(users => [...users, ...newUsers])
   }

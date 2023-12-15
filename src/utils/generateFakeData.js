@@ -4,7 +4,7 @@ import { FAKE_DATA, RU_CITY_PREFIX } from './consts';
 
 const createFakerator = (seed, country) => {
   const fakerator = Fakerator(`${country}-${country.toUpperCase()}`);
-  fakerator.seed(Number(seed));
+  fakerator.seed(seed);
   return fakerator;
 };
 
@@ -91,4 +91,4 @@ const getUser = (seed, country) => {
   };
 };
 
-export default getUser;
+export { getUser, getArrayItem };

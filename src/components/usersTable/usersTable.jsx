@@ -4,8 +4,8 @@ import { Context } from "../../hooks/useAppState"
 import Table from "./ui/table"
 
 const UsersTable = ({ }) => {
-  const { seed, region } = useContext(Context)
-  const { userList } = useGetUsers(seed, region)
+  const { seed, region, errorQantity } = useContext(Context)
+  const { userList } = useGetUsers(seed, region, errorQantity)
 
   return (
     <>
