@@ -19,9 +19,9 @@ const RegionSelect = ({ }) => {
           label="Region"
           onChange={handleChange}
         >
-          <MenuItem value={REGIONS.en}>EN</MenuItem>
-          <MenuItem value={REGIONS.ru}>RU</MenuItem>
-          <MenuItem value={REGIONS.fr}>FR</MenuItem>
+          <MenuItem value={REGIONS.us.id}>{REGIONS.us.title}</MenuItem>
+          <MenuItem value={REGIONS.ru.id}>{REGIONS.ru.title}</MenuItem>
+          <MenuItem value={REGIONS.de.id}>{REGIONS.de.title}</MenuItem>
         </Select>
       </FormControl>
     </div>
