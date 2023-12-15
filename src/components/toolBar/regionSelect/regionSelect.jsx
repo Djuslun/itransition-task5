@@ -10,7 +10,7 @@ const RegionSelect = ({ }) => {
 
   return (
     <div className='flex gap-2 items-center'>
-      <FormControl sx={{ m: 1, minWidth: 100 }} size='small'>
+      <FormControl sx={{ minWidth: 100 }} size='small'>
         <InputLabel id="regionSelect">Region</InputLabel>
         <Select
           labelId="regionSelect"

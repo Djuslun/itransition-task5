@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
-import { getUser } from "../../utils/generateFakeData"
-import { START_USER_QUANTITY, PAGE_STEP } from "../../utils/consts"
-import generateMistake from "../../utils/generateMistakesInUser"
+import { getUser } from "../utils/generateFakeData"
+import { START_USER_QUANTITY, PAGE_STEP } from "../utils/consts"
+import generateMistake from "../utils/generateMistakesInUser"
 
 const useGetUsers = (seed, country, mistakes = 0) => {
   const [userList, setUserList] = useState([])

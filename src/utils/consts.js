@@ -106,4 +106,19 @@ const MAX_SEED = 999999999
 const RU_CITY_PREFIX = ['г.', 'д.', 'г.п.', 'город', 'деревня', 'дер.', 'село'];
 const USER_MISTAKES_KEY = ['name', 'address', 'phone'];
 
-export { REGIONS, FAKE_DATA, RU_CITY_PREFIX, START_USER_QUANTITY, PAGE_STEP, MAX_SEED, USER_MISTAKES_KEY }
+const CSVHeaders = [
+  { label: "Id", key: "id" },
+  { label: "Name", key: "name" },
+  { label: "Adress", key: "adress" },
+  { label: "Telephone", key: "phone" },
+];
+
+export {
+  REGIONS,
+  FAKE_DATA,
+  CSVHeaders,
+  RU_CITY_PREFIX,
+  START_USER_QUANTITY,
+  PAGE_STEP, MAX_SEED,
+  USER_MISTAKES_KEY,
+}
