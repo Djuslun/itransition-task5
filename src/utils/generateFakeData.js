@@ -82,7 +82,7 @@ const getUser = (seed, country) => {
   const city = getCity(seed, country, seedRandomize);
   const street = getStreet(seed, country, city, seedRandomize);
   const house = getHouse(seed, country, seedRandomize);
-  const address = `${city}, ${street}, ${house}`;
+  const address = `${city}, ${street}${street ? ',' : ''} ${house}`;
   return {
     id: getId(seed, country),
     name: getName(seed, country, seedRandomize),
